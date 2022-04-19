@@ -10,12 +10,18 @@
     left: 0;
 }
 
-
-.header-top {
-    height: 3.9rem;
-    width: 100vw;
-    background-color: var(--text-black);
+#main{
+    background-color: var(--text-white);
 }
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    background-color: var(--text-white);
+}
+
 
 img.logo {
     display: flex;
@@ -80,7 +86,7 @@ img.logo {
 
 
 #content{
-    padding: 3rem;
+    padding: 3rem 3rem 6rem;
 }
 
 
@@ -113,29 +119,51 @@ img.logo {
     flex: 1;
 }
 
-img.img-new-1 {
-    max-height: 17rem;
+
+#content img.img-new-1 
+{
+    min-height: 17rem;
     height: auto;
-    width: -webkit-fill-available;
+    width: 100%;
     object-fit: cover;
-
 }
 
-img.img-new-1.overfit {
-    height: 100%;
+#vn-football img.img-new-1, 
+#team-fc img.img-new-1, 
+#hightlightfc img.img-new-1 
+{
+    min-height: 17rem;
+    height: auto;
+    width: 22.5rem;
+    object-fit: cover;
 }
+
 
 img.img-new-2 {
-    transform: translateX(-25%);
+    right: 0;
+    width: 100%;
     height: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    object-position: 50% 50%;
+    object-fit: cover;
 }
 
 a.title-new {
     text-decoration: none;
-    color: black;
+    color: var(--text-black);
     font-size: 1.6rem;
     font-weight: 600;
     margin: 1rem 0;
+}
+
+#vn-football a.title-new, 
+#team-fc a.title-new, 
+#hightlightfc a.title-new
+{
+    color: white;
 }
 
 .title-new--main{
@@ -148,8 +176,8 @@ a.title-new {
 
 a.title-new.title-new-middle,
 p.description-new{
-    color: var(--text-white);
-    text-shadow:   2px 2px 8px var(--text-black);;
+    color: white;
+    text-shadow:   2px 2px 8px black;
 }
 
 a.title-new.title-new-middle {
@@ -196,3 +224,221 @@ a.title-new.title-new-middle:hover {
     margin-top: 2rem;
 }
 
+
+#content .li-1--container {
+    padding: 0;
+}
+
+
+
+#vn-football .li-1--container, 
+#team-fc .li-1--container, 
+#hightlightfc .li-1--container
+{
+    padding: 2rem;
+}
+
+
+.li-1--container{
+    height: -webkit-fill-available;
+    margin-bottom: 2rem;
+}
+
+
+.list-main-container
+{
+    overflow-x: auto;
+    margin: 0 3rem;
+}
+.list-main-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.list-new{
+    background-color: var(--bg-list-new);
+    position: relative;
+    margin: 6rem 0;
+}
+
+#team-fc .list-new,
+#hightlightfc .list-new{
+    background-color: var(--bg-list-new23);
+    position: relative;
+    margin: 6rem 0;
+}
+
+.list-new-container,
+.list-new-container-2,
+.list-new-container-3{
+    display: flex;
+    margin: 2.5rem;
+    transform: translateX(-34px);
+}
+
+.title-container.title-container-black{
+    border-bottom: 0.1px solid var(--text-black);
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 3rem 3rem 0;
+    transition: all 0.7s ease-in-out;
+    border-bottom: 0.1px solid var(--text-white);
+}
+
+
+p.title-main.title-black{
+    color: var(--text-black);
+}
+
+p.title-main{
+    color: var(--text-yellow);
+    text-transform: uppercase;
+    font-size: 2.56rem;
+    font-weight: 600;
+}
+
+a.view-more.view-more-blue{
+    color: var(--blue);
+}
+
+
+a.view-more.view-more-blue:hover,
+a.view-more.view-more-blue:hover i{
+    color: var(--text-black);
+}
+
+
+a.view-more {
+    font-size: 2rem;
+    text-decoration: none;
+    color:white;
+}
+
+a.view-more i{
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+.text-new{
+    padding: 1rem;
+}
+
+
+.text-new--hover{
+    background-color: black;
+    transform: translateY(-4rem);
+    transition: all 0.4s ease;
+}
+
+
+
+.btn-after,
+.btn-pre,
+.btn-after-2,
+.btn-pre-2,
+.btn-after-3,
+.btn-pre-3{
+    font-size: 3.6rem;
+    color: white;
+    position: absolute;
+    top: 15%;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    height: 76%;
+    opacity: 0;
+    border-radius: 1rem;
+    width: 2rem;
+    transition: all .5s ease;
+}
+
+.btn-after i,
+.btn-pre i,
+.btn-after-2 i,
+.btn-pre-2 i,
+.btn-after-3 i,
+.btn-pre-3 i{
+    line-height: 34rem;
+} 
+
+.btn-after,
+.btn-after-2,
+.btn-after-3{
+    right: 0;
+}
+
+.btn-pre,
+.btn-pre-2,
+.btn-pre-3{
+    left: 0;
+}
+
+
+.btn-after:hover,
+.btn-pre:hover,
+.btn-after-2:hover,
+.btn-pre-2:hover,
+.btn-after-3:hover,
+.btn-pre-3:hover{
+    opacity: 0.7;
+}
+
+
+
+.header-top {
+    height: 3.9rem;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+}
+
+
+
+#toggleBtn {
+    position:absolute;
+    width: 4.5rem;
+    height: 2.6rem;
+    border: 0.2rem solid white;
+    border-radius: 20px;
+    background-color: rgb(100, 97, 97);
+    box-shadow: rgba(100, 100, 110, 0.2) 0px 8px 28px 0px;
+    /* position: fixed; */
+    top: 0.5rem;
+    right: 2rem;
+    z-index: 9;
+  }
+
+#toggleBtn.active {
+    background-color: black;
+}
+
+#toggleBtn::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.35s;
+
+}
+  #toggleBtn.active::before {
+    left: 20px;
+  }
+
+
+  .player-main-li{
+      display: flex;
+  }
