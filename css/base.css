@@ -6,10 +6,10 @@
     --background: #fafafa;
     --blue: #1976D2;
     --border: #dddddd;
-    --dark-gray: rgba(135,135,135,1);
-    --light-black: rgba(0,0,0,0.7);
-    --light-light-black: rgba(135,135,135,0.5);
-    --bg-list-new:#215a6e;
+    --dark-gray: rgba(135, 135, 135, 1);
+    --light-black: rgba(0, 0, 0, 0.7);
+    --light-light-black: rgba(135, 135, 135, 0.5);
+    --bg-list-new: #215a6e;
     --bg-list-new23: #113b40;
 }
 
@@ -22,10 +22,10 @@
     --background: black;
     --blue: #1976D2;
     --border: black;
-    --dark-gray: rgba(135,135,135,1);
+    --dark-gray: rgba(135, 135, 135, 1);
     --light-black: white;
-    --light-light-black: rgba(135,135,135,0.5);
-    --bg-list-new:#215a6e;
+    --light-light-black: rgba(135, 135, 135, 0.5);
+    --bg-list-new: #215a6e;
     --bg-list-new23: #113b40;
 }
 
@@ -57,36 +57,38 @@ li {
 }
 
 @keyframes OpacityIncre {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
 
 
 @keyframes OpacityReduce {
-    from{
+    from {
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0;
     }
 }
 
-.container{
+.container {
     max-width: 1147px;
 }
 
 
 @media screen and (max-width: 1023px) {
 
-    #header ul.nav{
+    #header ul.nav {
         display: none;
     }
 
-    #header ul.nav.nav-mobile{
+    #header ul.nav.nav-mobile {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -99,41 +101,41 @@ li {
         top: 0;
         padding: 3.9rem 0;
         transform: translateX(0%);
-        animation: OpacityIncre .7s ease-in-out ;
+        animation: OpacityIncre .7s ease-in-out;
         border: none;
     }
-    
-    #header ul.nav-mobile li{
+
+    #header ul.nav-mobile li {
         background-color: var(--background);
         border-top: 0.01rem solid var(--light-light-black);
         border-width: 0.05rem 0 0 0;
         margin-top: -0.2rem;
         padding: 2rem;
-    }   
+    }
 
-    #header ul.nav-mobile li:nth-child(1){
+    #header ul.nav-mobile li:nth-child(1) {
         border: none;
     }
 
 
-    #header ul.nav-mobile li:hover{
+    #header ul.nav-mobile li:hover {
         background-color: var(--text-gray);
         border: 0.05rem solid var(--light-light-black);
         border-width: 0.05rem 0 0 0;
     }
-    
 
-    #header ul.nav-mobile li:nth-child(1){
+
+    #header ul.nav-mobile li:nth-child(1) {
         border: none;
     }
-    
-    
-    #header ul.nav-mobile li.list-item a{
+
+
+    #header ul.nav-mobile li.list-item a {
         color: var(--dark-gray);
         font-size: 1.34rem;
     }
-    
-    #header ul.nav-mobile li.list-item:hover a{
+
+    #header ul.nav-mobile li.list-item:hover a {
         color: var(--light-black);
     }
 
@@ -141,13 +143,13 @@ li {
         color: var(--text-gray);
     }
 
-    .header-middle{
+    .header-middle {
         position: relative;
     }
 
 
 
-    .btn-menu{
+    .btn-menu {
         display: flex;
         font-size: 2rem;
         top: 35%;
@@ -157,41 +159,42 @@ li {
         color: var(--text-black);
     }
 
-    .btn-menu:hover{
+    .btn-menu:hover {
         opacity: 0.6;
         cursor: pointer;
     }
 
 
-    .content-header{
+    .content-header {
         flex-direction: column;
 
     }
 
-    .li-1{
+    .li-1 {
         padding: 0;
         overflow: unset;
     }
 
-    .li-2{
+    .li-2 {
         order: -1;
     }
 
-    
+
 
     .li-1,
-    .li-2{
+    .li-2 {
         padding: 2rem;
     }
 
-    img.img-new-1{
+    img.img-new-1 {
         width: 100%;
     }
 
-    #list-new img.img-new-1{
+    #list-new img.img-new-1 {
         width: 22.5rem;
     }
-    img.img-new-2{
+
+    img.img-new-2 {
         position: unset;
     }
 
@@ -199,11 +202,54 @@ li {
         text-align: center;
     }
 
-    
-    
+    .player-main-li {
+        flex-direction: column;
+    }
 
-    
+    .li-3-1-player,
+    .li-3-2-player,
+    .li-3-3-player {
+        flex-direction: column;
+    }
 
+
+    .li-player-3 img {
+        width: 100%;
+        height: 35rem;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+
+    .player-container a.title-new,
+    .player-container p.description-new {
+        text-align: start;
+        margin: 1rem 0;
+    }
+
+
+    .together-img-container {
+        flex-direction: column;
+    }
+
+    .together-img-container .li-1-1-player {
+        flex-direction: column;
+        height: auto;
+        max-width: none;
+    }
+
+
+    .together-img-container .li-1-1-player img {
+        max-width: none;
+        object-fit: cover;
+        min-height: none;
+        width: auto;
+    }
+
+
+    .together-img-container p {
+        text-align: center;
+    }
 
 
 }
